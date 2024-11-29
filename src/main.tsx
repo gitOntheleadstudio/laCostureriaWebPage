@@ -1,10 +1,16 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import './styles.scss'
+import { NextUIProvider } from '@nextui-org/react'
+import { ThemeProvider } from 'next-themes'
+import LandingPage from './app/core/components/landing-page/LandingPage'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <NextUIProvider>
+      <ThemeProvider attribute='class' defaultTheme='modern' themes={['light', 'dark', 'modern']}>
+        <LandingPage />
+      </ThemeProvider>
+    </NextUIProvider>
   </StrictMode>,
 )
