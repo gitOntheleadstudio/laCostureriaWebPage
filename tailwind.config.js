@@ -12,7 +12,6 @@ export default {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
         focus: 'var(--focus)',
-        'primary-50': 'var(--primary-50)',
         'primary-100': 'var(--primary-100)',
         'primary-200': 'var(--primary-200)',
         'primary-300': 'var(--primary-300)',
@@ -32,21 +31,21 @@ export default {
       "modern": {
         extend: "dark",
         colors: {
-          background: "#000000",
-          foreground: "#ffffff",
-          focus: "#ffc71a",
+          background: "#e4ddd6",
+          foreground: "#3c276a",
+          focus: "#98c8b4",
           primary: {
-            50: "#fff9da",
-            100: "#ffecad",
-            200: "#ffe07d",
-            300: "#ffd34b",
-            400: "#ffc71a",
-            500: "#e6ad00",
-            600: "#b38700",
-            700: "#806000",
-            800: "#4e3a00",
-            900: "#1d1300",
-            DEFAULT: "#ffc71a"
+            50: "#f1ebff",
+            100: "#d2c7ec",
+            200: "#b4a2dd",
+            300: "#b4a2dd",
+            400: "#7858bf",
+            500: "#5f3fa6 ",
+            600: "#4a3081",
+            700: "#35225d",
+            800: "#20153a",
+            900: "#0c0618",
+            DEFAULT: "#35225d"
           },
         }
       }

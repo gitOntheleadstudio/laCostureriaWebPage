@@ -1,0 +1,54 @@
+.footer {
+    height: 90vh;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+        font-family: "Poopins";
+        text-align: center;
+        font-size: 6rem;
+        font-weight: normal;
+    }
+    h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    a {
+        font-size: 2rem;
+        height: fit-content;
+        width: fit-content;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .social {
+        width: 90%;
+        display: flex;
+        gap: 10px;
+
+        a {
+            padding: 0;
+            svg {
+                font-size: 3rem;
+                color: white;
+            }
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            color: var(--foreground);
+            background-color: white;
+            border-radius: 20px;
+            height: fit-content;
+            padding: 10px 10px;
+
+            svg {
+                color: var(--foreground);
+                font-size: 2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+@use '../../../styles/' as *;
+
+.banner {
+    .banner-content {
+        min-height: 100svh;
+        padding-left: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-size: cover;
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 8rem;
+            font-family: "Moontime";
+            line-height: 70%;
+            margin-bottom: 40px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        a {
+            font-size: 1.5rem;
+            width: fit-content;
+            font-family: "Poopins";
+        }
+    }
+}
+
+.banner-imgContainer{
+    height: 100svh;
+    overflow: hidden;
+    .banner-img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.sliderBanner {
+
+    .slick-arrow {
+        z-index: 11;
+
+        &::before {
+            color: var(--foreground);
+            font-size: 40px; //tamaño de los botones
+        }
+
+        &.slick-prev {
+            left: 10px;
+
+        }
+
+        &.slick-next {
+            right: 30px;
+
+        }
+    }
+
+    .slick-dots {
+        z-index: 11;
+        bottom: 30px;
+
+        .slick-active {
+            button::before {
+                color: var(--focus);
+                opacity: 1;
+            }
+        }
+        
+        li {
+            button::before {
+                font-size: 2rem;
+                color: var(--focus);
+                opacity: .5;
+            }
+
+        }
+    }
+}
