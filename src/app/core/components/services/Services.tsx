@@ -22,7 +22,7 @@ export default function Services(_: {
     const { headline, service1, service2, service3 } = _
     const [pivot, setPivot] = useState(4)
     return (
-        <div className='services'>
+        <div className='services' id='services' >
             <h1>{headline}</h1>
             <div className="services-box">
                 <div className="services-header">
@@ -36,7 +36,7 @@ export default function Services(_: {
                         <h2 className={pivot === 3 ? 'active' : ''}>{service3.subheadline}</h2>
                     </button>
                 </div>
-                <div className="cards">
+                <div className="cards" onClick={() => setPivot(0)}>
                     <div className={`card ${pivot === 1 ? 'active' : ''}`}>
                         <img src={service1.picture} alt="Imagen servicio" />
                         <p><Markdown source={service1.description} /></p>

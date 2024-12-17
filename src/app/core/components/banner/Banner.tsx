@@ -32,7 +32,7 @@ export default function Banner(_: {
                         <h1>{headline}</h1>
                         <h2>{subheadline}</h2>
                         <h3><Markdown source={subheadline2}></Markdown></h3>
-                        <Button radius='full' as={Link} href={buttonLink}>{button}</Button>
+                        <Button radius='full' as={Link} href={buttonLink} color='primary'>{button}</Button>
                     </div>
                 </div>
                 {

@@ -1,6 +1,8 @@
 @use '../../../styles/' as *;
 
 .banner {
+    position: relative;
+    top: -9vh;
     .banner-content {
         min-height: 100svh;
         padding-left: 10%;

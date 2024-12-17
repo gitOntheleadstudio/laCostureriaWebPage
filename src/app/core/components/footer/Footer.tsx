@@ -18,7 +18,7 @@ export default function Footer(_: {
         <div className='footer'>
             <h1>{headline}</h1>
             <h2><Markdown source={subheadline} /></h2>
-            <Button as={Link} href={buttonLink} radius='full'>{button}</Button>
+            <Button as={Link} href={buttonLink} radius='full' color='primary'>{button}</Button>
             <div className="social">
                 <a href={igLink}><FaInstagram /></a>
                 <a href={inLink}><FaLinkedin /></a>
