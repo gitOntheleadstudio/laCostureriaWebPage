@@ -95,7 +95,7 @@ export const formularyConv = (data: iPages) => {
 }
 
 export const footerConv = (data: iPages) => {
-    const { button,button_link,headline,ig_link,in_link,libro_de_reclamaciones,mail,subheadline,whatsapp } = data.footer
+    const { button,button_link,headline,ig_link,in_link,mail,subheadline,whatsapp } = data.footer
     return {
         button,
         buttonLink: button_link,

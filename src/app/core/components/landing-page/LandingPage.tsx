@@ -1,6 +1,5 @@
 import { ComponentProps, useEffect, useState } from 'react'
 import Utils from '../../../shared/Utils/Utils'
-import TestValues from '../../Utils/TestValues'
 import Banner from '../banner/Banner'
 import Benefits from '../benefits/Benefits'
 import Footer from '../footer/Footer'
@@ -20,7 +19,6 @@ export default function LandingPage() {
     const [services, setServices] = useState<ComponentProps<typeof Services>>()
     const [formulary, setFormulary] = useState<ComponentProps<typeof Formulary>>()
     const [footer, setFooter] = useState<ComponentProps<typeof Footer>>()
-    const testV = TestValues
     useEffect(() => {
         getDocs(q).then((v) => {
             v.forEach((e) => {

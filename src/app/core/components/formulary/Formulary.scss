@@ -1,3 +1,4 @@
+@use '../../../styles/' as *;
 .formulary {
     position: relative;
     display: flex;
@@ -5,10 +6,20 @@
     align-items: center;
     min-height: 60svh;
 
+    @media (max-width: $medium) {
+        //media------------------------------------------------------------------
+        flex-direction: column;
+        gap: 20px;
+    }
+
     .carreteImg {
         position: absolute;
         width: 200px;
         bottom: 0;
+        @media (max-width: $medium) {
+            //media------------------------------------------------------------------
+            display: none;
+        }
     }
 
     .instructive {
@@ -32,13 +43,18 @@
             margin-top: 10px;
             gap: 15px;
 
+            @media (max-width: $medium) {
+                //media------------------------------------------------------------------
+                font-size: 1.3rem;
+            }
+
             span {
                 display: flex;
                 font-family: "Poopins";
                 background-color: var(--focus);
                 align-items: center;
                 justify-content: center;
-                width: 60px;
+                min-width: 60px;
                 height: 60px;
                 border-radius: 100%;
                 font-size: 3rem;
