@@ -19,10 +19,13 @@ export default function LandingPage() {
     const [services, setServices] = useState<ComponentProps<typeof Services>>()
     const [formulary, setFormulary] = useState<ComponentProps<typeof Formulary>>()
     const [footer, setFooter] = useState<ComponentProps<typeof Footer>>()
+    const [wspLink, setWspLink] = useState<string>()
+
     useEffect(() => {
         getDocs(q).then((v) => {
             v.forEach((e) => {
                 const res = e.data() as iPages
+                setWspLink(res.whatsapp_link)
                 setBanner(bannerConv(res))
                 setBenefits(benefitsConv(res))
                 setServices(servicesConv(res))
@@ -33,13 +36,17 @@ export default function LandingPage() {
     }, [])
     return (
         <div>
-            <div className='wsp'>
-                <a href="#">
-                    <button>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="whatsapp imagen" />
-                    </button>
-                </a>
-            </div>
+            {
+                loaded ?
+                    <div className='wsp'>
+                        <a href={wspLink}>
+                            <button>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="whatsapp imagen" />
+                            </button>
+                        </a>
+                    </div>
+                    : ""
+            }
             <NavbarC />
             <section >
                 {Utils.asyncComponent(Banner, banner, loaded)}

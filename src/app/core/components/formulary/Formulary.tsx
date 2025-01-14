@@ -61,7 +61,8 @@ export default function Formulary(_: {
                 <Checkbox required isSelected={isAccept} onValueChange={setIsAccept}>Acepto los Terminos y Condiciones</Checkbox>
                 <Button color='primary' radius='full' size='lg' type='submit'>{button}</Button>
             </form>
-            <img className='carreteImg' src="https://img.freepik.com/vector-premium/carretes-hilos_202271-2468.jpg" alt="imagen bordado" />
+            
         </div>
     )
 }
+//<img className='carreteImg' src="https://img.freepik.com/vector-premium/carretes-hilos_202271-2468.jpg" alt="imagen bordado" />

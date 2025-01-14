@@ -5,6 +5,7 @@ import Formulary from "../components/formulary/Formulary"
 import Services from "../components/services/Services"
 
 export type iPages = {
+    whatsapp_link: string,
     banner: {
         headline: string,
         button_link: string,
@@ -95,7 +96,7 @@ export const formularyConv = (data: iPages) => {
 }
 
 export const footerConv = (data: iPages) => {
-    const { button,button_link,headline,ig_link,in_link,mail,subheadline,whatsapp } = data.footer
+    const { button,button_link,headline,ig_link,in_link,mail,subheadline,whatsapp, libro_de_reclamaciones } = data.footer
     return {
         button,
         buttonLink: button_link,
@@ -104,6 +105,7 @@ export const footerConv = (data: iPages) => {
         inLink: in_link,
         mail,
         subheadline,
-        wsp:whatsapp
+        wsp:whatsapp,
+        libro_de_reclamaciones
     } as React.ComponentProps<typeof Footer>
 }
