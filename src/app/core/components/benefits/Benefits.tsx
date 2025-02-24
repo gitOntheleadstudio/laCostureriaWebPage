@@ -26,17 +26,17 @@ export default function Benefits(_: {
                 <div className="card">
                     <img src={card1.picture} alt="imagen del beneficio" />
                     <h2>{card1.subheadline}</h2>
-                    <p><Markdown source={card1.description} /></p>
+                    <Markdown source={card1.description} />
                 </div>
                 <div className="card">
                     <img src={card2.picture} alt="imagen del beneficio" />
                     <h2>{card2.subheadline}</h2>
-                    <p><Markdown source={card2.description} /></p>
+                    <Markdown source={card2.description} />
                 </div>
                 <div className="card">
                     <img src={card3.picture} alt="imagen del beneficio" />
                     <h2>{card3.subheadline}</h2>
-                    <p><Markdown source={card3.description} /></p>
+                    <Markdown source={card3.description} />
                 </div>
             </div>
         </div>

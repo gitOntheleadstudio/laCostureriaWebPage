@@ -2,7 +2,7 @@ import { Button, Link, Navbar, NavbarBrand, NavbarContent, NavbarItem } from '@n
 import './NavbarC.scss'
 export default function NavbarC() {
   return (
-    <Navbar maxWidth='full' isBlurred={false} style={{backgroundColor:"unset"}} classNames={{wrapper:"navbarC"}}>
+    <Navbar maxWidth='full' isBlurred={false} style={{backgroundColor:"unset"}} classNames={{wrapper:"navbarC",base:"navbarB"}}>
       <NavbarBrand>
         <img src="/LOGO_REDUCIDO_MORADO.png" alt="logo" />
       </NavbarBrand>

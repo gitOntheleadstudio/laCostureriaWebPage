@@ -2,6 +2,7 @@ import { Button, Link } from '@nextui-org/react'
 import './Banner.scss'
 import Slider from 'react-slick'
 import { Markdown } from '@firecms/ui'
+import useScreenOrientation from '../../../shared/Utils/hooks/useScreenOrientation'
 export default function Banner(_: {
     headline: string,
     subheadline: string,
@@ -11,10 +12,12 @@ export default function Banner(_: {
     bkgImage: string
     slider: {
         picture: string,
+        picture_portrait?: string,
         link: string
     }[]
 }) {
     const { bkgImage, button, buttonLink, headline, slider, subheadline, subheadline2 } = _
+    const screenOrientation = useScreenOrientation()
     const slideSettings = {
         className: "sliderBanner",
         infinite: true,
@@ -28,7 +31,7 @@ export default function Banner(_: {
         <div className='banner'>
             <Slider {...slideSettings}>
                 <div className="banner-box">
-                    <div className="banner-content" style={{ backgroundImage: `url(${bkgImage})` }}>
+                    <div className="banner-content" style={{ background: ` url(${bkgImage})` }}>
                         <h1>{headline}</h1>
                         <h2>{subheadline}</h2>
                         <h3><Markdown source={subheadline2}></Markdown></h3>
@@ -37,10 +40,15 @@ export default function Banner(_: {
                 </div>
                 {
                     slider.map((e, i) => {
+
                         return (
                             <div key={`bannerPic-${i}`} className='banner-imgContainer'>
                                 <a href={e.link}>
-                                    <img className='banner-img' src={e.picture} alt="Banner picture" />
+                                    {
+                                        screenOrientation === "portrait-primary" ?
+                                            <img className='banner-img' src={e.picture_portrait} alt="Banner picture" /> :
+                                            <img className='banner-img' src={e.picture} alt="Banner picture" />
+                                    }
                                 </a>
                             </div>
                         )

@@ -25,7 +25,7 @@ export default function Footer(_: {
             <Button as={Link} href={buttonLink} radius='full' className='bg-foreground-50 text-primary'>{button}</Button>
             <div className="social">
                 <div className="social-left">
-                    <p className='text-primary-50'>ON the Lead Studio 2025</p>
+                    <p className='text-primary-50'>2025 - Diseñado e implementado por ON the Lead Studio</p>
                 </div>
                 <div className='social-right'>
                     <div className="icons">

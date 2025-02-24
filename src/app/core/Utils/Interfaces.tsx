@@ -13,7 +13,8 @@ export type iPages = {
         background_image: string
         slider: {
             link: string,
-            picture: string
+            picture: string,
+            picture_portrait?: string
         }[],
         subheadline2: string,
         subheadline: string,

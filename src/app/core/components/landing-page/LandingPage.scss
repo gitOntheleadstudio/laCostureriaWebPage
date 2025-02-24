@@ -1,4 +1,4 @@
-
+@use '../../../styles/' as *;
 
 .wsp {
     width: 100px;
@@ -8,5 +8,10 @@
     z-index: 2;
     img {
         width: 100%;
+    }
+
+    @media (max-width: $medium) {
+        //media------------------------------------------------------------------
+        width: 50px;
     }
 }
