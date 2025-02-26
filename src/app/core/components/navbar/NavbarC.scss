@@ -1,5 +1,5 @@
 .navbarC {
-    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    //background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgb(0, 0, 0) 150%);
     padding:  0 8vw;
 
     img {
@@ -17,6 +17,15 @@
                     font-size: 1.2rem;
                 }
             }
+        }
+    }
+}
+
+.navbarM {
+    background-color: #D0C1DA;
+    li {
+        a {
+            font-family: Poopins;
         }
     }
 }

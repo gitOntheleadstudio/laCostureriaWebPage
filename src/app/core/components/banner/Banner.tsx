@@ -1,7 +1,5 @@
-import { Button, Link } from '@nextui-org/react'
 import './Banner.scss'
 import Slider from 'react-slick'
-import { Markdown } from '@firecms/ui'
 import useScreenOrientation from '../../../shared/Utils/hooks/useScreenOrientation'
 export default function Banner(_: {
     headline: string,
@@ -16,7 +14,8 @@ export default function Banner(_: {
         link: string
     }[]
 }) {
-    const { bkgImage, button, buttonLink, headline, slider, subheadline, subheadline2 } = _
+    //const { bkgImage, button, buttonLink, headline, slider, subheadline, subheadline2 } = _
+    const slider = _.slider
     const screenOrientation = useScreenOrientation()
     const slideSettings = {
         className: "sliderBanner",
@@ -30,14 +29,6 @@ export default function Banner(_: {
     return (
         <div className='banner'>
             <Slider {...slideSettings}>
-                <div className="banner-box">
-                    <div className="banner-content" style={{ background: ` url(${bkgImage})` }}>
-                        <h1>{headline}</h1>
-                        <h2>{subheadline}</h2>
-                        <h3><Markdown source={subheadline2}></Markdown></h3>
-                        <Button radius='full' as={Link} href={buttonLink} color='primary'>{button}</Button>
-                    </div>
-                </div>
                 {
                     slider.map((e, i) => {
 
@@ -58,3 +49,14 @@ export default function Banner(_: {
         </div>
     )
 }
+/**
+ * 
+                <div className="banner-box">
+                    <div className="banner-content" style={{ background: ` url(${bkgImage})` }}>
+                        <h1>{headline}</h1>
+                        <h2>{subheadline}</h2>
+                        <h3><Markdown source={subheadline2}></Markdown></h3>
+                        <Button radius='full' as={Link} href={buttonLink} color='primary'>{button}</Button>
+                    </div>
+                </div>
+ */

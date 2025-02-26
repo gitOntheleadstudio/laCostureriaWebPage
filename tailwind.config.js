@@ -11,6 +11,7 @@ export default {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+        secondary: "#ffffff",
         focus: 'var(--focus)',
         'primary-100': 'var(--primary-100)',
         'primary-200': 'var(--primary-200)',
@@ -34,13 +35,14 @@ export default {
           background: "#e4ddd6",
           foreground: "#3c276a",
           focus: "#98c8b4",
+          secondary: "#ffffff",
           primary: {
             50: "#f1ebff",
             100: "#d2c7ec",
             200: "#b4a2dd",
             300: "#b4a2dd",
             400: "#7858bf",
-            500: "#5f3fa6 ",
+            500: "#5f3fa6",
             600: "#4a3081",
             700: "#35225d",
             800: "#20153a",
