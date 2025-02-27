@@ -21,7 +21,7 @@ export default function Banner(_: {
         className: "sliderBanner",
         infinite: true,
         speed: 500,
-        //autoplay: true,
+        autoplay: true,
         dots: true,
         autoplaySpeed: 4000,
         pauseOnHover: false
